@@ -539,3 +539,57 @@ transform: scale(0.98);
   margin-left: 15px;
   animation: loader_5191 675ms ease-in-out 600ms infinite;
 }
+
+
+
+
+@media (max-width: 782px) {
+  .section_info1{
+    display: none !important;
+  }
+
+  .appTitle{
+    margin-top: 5rem;
+  }
+
+  .auth_intro_section{
+    height: 100%;
+  }
+
+  .auth{
+    height: max-content;
+    /* padding-bottom: 3rem; */
+  }
+
+
+  .search_icon{
+    position: absolute;
+    top: 71px;
+    left: 13px;
+  }
+
+  .logo_text{
+    font-size: 1.5rem;
+  }
+
+  .searchnav{
+    position: absolute;
+    top: 71px;
+    left: 13px;
+  }
+}
+
+@media (max-width: 582px) {
+    .auth_form{
+      width: 250px;
+    }
+
+    .create_edit{
+      font-size: 2rem;
+    }
+
+    .fromto {
+      display: flex;
+      flex-direction: column;
+    }
+}

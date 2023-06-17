@@ -238,6 +238,7 @@ const Auth = () => {
         </Row>
       </section>
 
+
       <section className="section_info1 w-full h-[80vh]">
         <Row className="w-full h-full">
           <Col className="w-full h-full lflex justify-center items-center" xl={12} md={12} sm={24} xs={24}>
@@ -261,6 +262,8 @@ const Auth = () => {
           </Col>
         </Row>
       </section>
+
+
 
 
 

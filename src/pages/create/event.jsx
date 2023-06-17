@@ -100,7 +100,7 @@ const Event = () => {
   return (
     <div className="create_event">
       <div className="create_event_heading pt-32">
-        <h1 className="text-green-500 font-extrabold">CREATE AN EVENT</h1>
+        <h1 className="text-green-500 font-extrabold create_edit">CREATE AN EVENT</h1>
 
         <div className="form_create_event flex justify-center mt-20">
           <form onSubmit={handleSubmit} className="flex w-full h-full flex-col items-center auth_form">
