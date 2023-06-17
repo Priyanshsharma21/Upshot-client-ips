@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import cookie from 'cookie'
 import axios from 'axios'
-import { EventCard } from '@/components'
+import { EventCard,Loader } from '@/components'
 import { Col, Row } from 'antd'
 
 const Search = ({events,q}) => {
@@ -18,11 +18,20 @@ const Search = ({events,q}) => {
     <div className="search_main">
         <div className="events pt-40">
         <Row className='events_box flex justify-evenly'>
+        {filterEvents.length<=0 ? (
+         <>
+          <Loader />
+         </>
+        ):(
+          <>
           {filterEvents?.map((event,i)=>(
             <Col xs={24} sm={12} lg={6} key={event._id} className='eventCard mt-5'>
                 <EventCard key={event._id} post={event} />
             </Col>
           ))}
+          </>
+        )}
+          
         </Row>
       </div>
     </div>
@@ -44,7 +53,7 @@ export async function getServerSideProps(context){
         }
       };
   
-      const res = await axios.get(`http://localhost:8000/api/v1/event`,options)
+      const res = await axios.get(`https://goofy-purple-lungfish.glitch.me/api/v1/event`,options)
       const events = res.data.events
   
       return {

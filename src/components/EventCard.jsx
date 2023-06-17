@@ -5,6 +5,8 @@ import moment from 'moment';
 import { AiOutlineLike,AiFillLike } from 'react-icons/ai'
 import axios from 'axios';
 
+
+
 const EventCard = ({post}) => {
     const { title, location, eventDate, category, cost, deadline,organizer,banner,postedAt,likes,_id } = post;
     const [likeActive, setLikeActive] = useState(false)
@@ -32,7 +34,7 @@ const EventCard = ({post}) => {
         }
       };
       try {
-        const res = await axios.get(`http://localhost:8000/api/v1/event/likes/${eventId}`,options);
+        const res = await axios.get(`https://goofy-purple-lungfish.glitch.me/api/v1/event/likes/${eventId}`,options);
         const updatedLikes = res.data.likes; // assuming the API response includes the updated list of likes
         console.log(res.data)
         // setLikeActive((prev) => !prev);
